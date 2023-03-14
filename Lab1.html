@@ -3,14 +3,71 @@
 <head>
  <meta charset="utf-8" />
  <title>My Website</title>
+ <style>
+table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+table td 
+{
+    border: 1px solid black;
+
+    
+}
+table th
+{
+    border: 1px solid black;
+}
+.kcz
+{
+    width: 150px;
+    height: 15 0px;
+}
+ </style>
 </head>
 <body>
- <h1>Nazywam się <i>Jakub Izdebski</i></h1>
- <h2>Całe życię gram w siatówkę</h2>
- <i>Moja ulubiona książka to ,,Olej kujawski"</i>
- <p>
- <b>Dodatkowo mogę powiedzieć, że jeżdżę na rowerze</b>
- <p>
+ <header><h1>Nazywam się <i>Jakub Izdebski</i></h1></header>
+ <nav>
+    <ul>
+        <li><a href="">Strona głowna</a></li>
+        <li><a href="Lista zakupów">Lista zakupów</a></li>
+        <li><a href="#">Zwierzęta</a></li>
+    </ul>
+ </nav>
+</header>
+<main>
+    <section>
+        <h2>Studiuję informatykę</h2>
+        <article>
+            <h3>Mam 20 lat</h3>
+            <h4>Posiadam wykształcenie średnie</h4>
+            <h5>Czytam bardzo dużo książek</h5>
+            <h6>Siłownia to mój drugi dom</h6>
+            <p><i>Potrafię żongować</i></p>
+            <p><b>Na festiwalu pizzy zjadłem 17 kawałków</b></p>
+        </article>
+    </section>
+    <aside><table>
+        <tr>
+            <th>2022 - 2023</th>
+            <td>WSIiZ</td>
+        </tr>
+        <tr>
+            <th>2017 - 2021</th>
+            <td>Szkoła Średnia</td>
+        </tr>
+        <tr>
+            <th>2010 - 2017</th>
+            <td>Szkoła Podstawowa</td>
+        </tr>
+    </table></aside>
+</main>
+
+    <h3>Lista zakupów</h3>
     <ul>
         <li>Kurczak</li>
         <li>Pomidor</li>
@@ -18,6 +75,7 @@
     </ul>
  </p>
 <p>
+    <h3>Lista zwierząt</h3>
     <ol>
         <li>Krowa</li>
         <li>Pies</li>
@@ -26,15 +84,37 @@
 </p>
 <p> <a href = „https://www.google.pl/” > Tutaj można coś wyszukać </a></p>
 
-<table>
+<p>
+    <table>
     <tr>
-        <td>2022 - 2023</td><td>WSIiZ</td>
+        <td></td>
+        <td rowspan="2"></td>
+        <td></td>
     </tr>
-                    <td>2017 - 2021</td><td>Szkoła Średnia</td>
-        <td>2010 - 2017</td><td>Szkoład Podstawowa</td>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="2" rowspan="2"></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td></td>
     </tr>
 </table>
-<p> co tam waraicie</p>
- 
+</p>
+
+<footer>
+    <hr>
+    <p>
+        <img class="kcz" src="kaczucha.jpg" alt="kaczka">
+</p>
+    </p>
+</footer>
 </body>
 </html>
