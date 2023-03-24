@@ -1,29 +1,6 @@
-table
-{
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    height: 100px;
-    width: 100px;
+* {
+    box-sizing: border-box;
 }
-table td 
-{
-    border: 1px solid black;
-
-    
-}
-table th
-{
-    border: 1px solid black;
-}
-.kcz
-{
-    width: 150px;
-    height: 15 0px;
-}   
-
-
-
 body
 {
     margin: 0;
@@ -39,17 +16,37 @@ body
 h1
 {
     font-size: 50px;
-    text-align: right;
-
-
 }
 h4
 {
     font-size: 30px;
 }
+
+
+table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+table, td, th 
+{
+    border: 1px solid black;  
+}
+
+.kcz
+{
+    width: 150px;
+    height: 15 0px;
+}   
+
 header
 {
-    position: fixed;
+    position: relative;
+    top: 0px;
+    left: 0px;
     height: 100px;
     background-color: rgb(158, 156, 156);
     margin: 0%;
