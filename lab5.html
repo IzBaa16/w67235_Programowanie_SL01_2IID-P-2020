@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+//zad1
+let wiek = prompt("Ile masz lat?");
+
+if (wiek >=18) {
+
+  alert("Jesteś pełnoletni");
+
+} else {
+
+  alert("Nie jesteś pełnoletni");
+
+}
+
+//zad2
+let stopnie = prompt("Podaj stopnie celsjusza:");
+let fa = 2 * stopnie + 32;
+console.log(stopnie + " stopni Celsjusza to " + fa + " stopni Fahrenheita")
+
+
+//zad3
+//1
+let tablica1 = [1, 2, 3, 3, 3];
+let suma = 0;
+for (let i = 0; i < tablica1.length; i++) {
+    suma += tablica1[i]
+}
+console.log(suma)
+
+//2
+const przefiltrowanaTablica = tablica1.filter(element => element % 2 === 0);
+console.log(przefiltrowanaTablica);
+
+//3
+const przetworzonaTablica = tablica1.map(element => element * 2);
+console.log(przetworzonaTablica);
+
+//4
+tablica1.push(67235)
+console.log(tablica1)
+let index = tablica1.findIndex(x=> x === 67235)
+console.log(index)
+
+
+//5
+let zad5 = suma / tablica1.length
+console.log(zad5);
+
+//6
+let max = Math.max(...tablica1);
+console.log(max)
+
+//7
+let wystapienia = tablica1.filter(x=> x === 3).length;
+console.log(wystapienia)
+
+//zad4
+// const fib = [];
+
+// fib[0] = 0;
+// fib[1] = 1;
+
+// for(ley i = 2; i <100; i++) {
+//     fib.push(fib[i - 2]) + fib[i -1];
+
+// }
+
+
+</script>
+</body>
+</html>
