@@ -54,24 +54,54 @@
 // "Student nazywa się " + this.imie + " " + this.nazwisko + ", jego numer albumu to " + this.numer_albumu + ", jego oceny z matematyki, przyrody i historii to: " + this.ocena_1 + " " + this.ocena_2 + " " + this.ocena_3 + ", a średnia z tych ocen to: " + x;
 
 // zad3
-class Auto {
-    constructor(marka, model, rok_produkcji, kolor, predkosc) {
-        this.marka = marka;
-        this.model = model;
-        this.rok_produkcji = rok_produkcji;
-        this.kolor = kolor;
-        this.predkosc = predkosc;
-    }
-    auto() {
-        return `Auto to ${this.marka} ${this.model}, rok produkcji to: ${this.rok_produkcji}, jego kolor to: ${this.kolor} i jedzie ${this.predkosc}`;
-    }
-    predkosc() {
-        this.predkosc =  this.predkosc - 20;
-        return `Prędkość auta wynosi: ${this.predkosc}`;
-    }
+// class Auto {
+//     constructor(marka, model, rok_produkcji, kolor, predkosc) {
+//         this.marka = marka;
+//         this.model = model;
+//         this.rok_produkcji = rok_produkcji;
+//         this.kolor = kolor;
+//         this.predkosc = predkosc;
+//     }
+//     auto() {
+//         return `Auto to ${this.marka} ${this.model}, rok produkcji to: ${this.rok_produkcji}, jego kolor to: ${this.kolor} i jedzie ${this.predkosc}`;
+//     }
+//     predkosc() {
+//         this.predkosc =  this.predkosc - 20;
+//         return `Prędkość auta wynosi: ${this.predkosc}`;
+//     }
+// }
+
+// const obj = new Auto("Audi", "a7", "2022", "zielony", 200);
+
+// console.log(obj.auto());
+
+// zad4 
+class Prostokat {
+  constructor(dlugosc, szerokosc) {
+    this.dlugosc = dlugosc;
+    this.szerokosc = szerokosc;
+  }
+
+  pole() {
+    return this.dlugosc * this.szerokosc;
+  }
+
+  obwod() {
+    return 2 * (this.dlugosc + this.szerokosc);
+  }
+
+  czyKwadrat() {
+    return this.dlugosc === this.szerokosc;
+  }
 }
 
-const obj = new Auto("Audi", "a7", "2022", "zielony", 200);
+const prostokat1 = new Prostokat(4, 6);
+console.log("Pole prostokąta 1:", prostokat1.pole());
+console.log("Obwód prostokąta 1:", prostokat1.obwod());
+console.log("Czy prostokąt 1 jest kwadratem:", prostokat1.czyKwadrat());
 
-console.log(obj.auto());
+const prostokat2 = new Prostokat(7, 7);
+console.log("Pole prostokąta 2:", prostokat2.pole());
+console.log("Obwód prostokąta 2:", prostokat2.obwod());
+console.log("Czy prostokąt 2 jest kwadratem:", prostokat2.czyKwadrat());
 
