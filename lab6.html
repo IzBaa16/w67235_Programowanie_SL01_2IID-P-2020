@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .selected {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <button>tekst</button>
+    <button>tesks</button>
+    <button>tekst</button>
+    <p>Tekst do ukrycia </p>
+
+    <input type="text" />
+
+    <button id="submit">Submit</button>
+    <ul></ul>
+
+
+    <input id="Name" type="text">
+    <input id="Surname" type="text">
+    <button id="sub">Submit</button>
+    
+
+    <table>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+
+    <script>
+        // zad1
+        function silnia(n) {
+            if(n > 1) {
+                return n* silnia(n - 1);
+            }
+            return 1;
+        }
+        console.log(silnia(6));
+        
+        // zad2 
+        const btns = document.querySelectorAll('button');
+        
+        // for(ley i = 0; i< btns.length; i++) {
+        //     const btn = btns[i];
+        // }
+        const elementToHide = document.querySelector('p')
+
+
+        let selectedBtn;
+        
+        btns.forEach(btn => {
+        
+            btn.addEventListener('click', () => {
+                if(selectedBtn) {
+                    selectedBtn.classList.remove('selected');
+                }
+                
+                elementToHide.hidden = !elementToHide.hidden;
+                
+
+                btn.classList.add('selected');
+                selectedBtn = btn;
+            })
+        })
+
+        const input = document.querySelector('input');
+        const submit = document.querySelector('#submit');
+        const ul = document.querySelector('ul');
+
+        submit.addEventListener('click', () => {
+            const value = input.value;
+            const li1 = document.createElement('li');
+            li1.textContent = value;
+            ul.appendChild(li1);
+        })
+
+        const submit2 = document.querySelector('#sub');
+        const name = document.querySelector('#Name');
+        const surname = document.querySelector('#Surname');
+        const table = document.querySelector('table');
+
+        submit2.addEventListener('click', () => {
+            let newRow = table.insertRow();
+            let newCell = newRow.insertCell();
+            newCell.textContent = name.value;
+
+            let newCell2 = newRow.insertCell();
+            newCell2.textContent = surname.value;
+
+            name.value = null
+
+
+        })
+
+
+        
+
+
+
+
+            </script>
+</body>
+</html>
