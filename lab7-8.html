@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Ogólne style dla formularza */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Style dla etykiet */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style dla pól tekstowych */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Style dla listy wyboru */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Style dla przycisku */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style dla komunikatu o błędzie */
+span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name"><br><br>
+      <label for="surname">Nazwisko:</label>
+      <input type="text" id="surname" name="surname"><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password"><br><br>
+      
+      <label for="gender">Płeć:</label>
+      <select id="gender" name="gender">
+      <option value="male">Mężczyzna</option>
+      <option value="female">Kobieta</option>
+      <option value="other">Inna</option>
+      </select><br><br>
+      
+      <label for="phone">Telefon:</label>
+      <input type="tel" id="phone" name="phone"><br><br>
+      
+      <label for="birthdate">Data urodzenia:</label>
+      <input type="date" id="birthdate" name="birthdate"><br><br>
+      
+      <label for="country">Kraj:</label>
+      <input type="text" id="country" name="country"><br><br> 
+
+        <input type="submit" value="Zapisz">
+      </form> 
+      
+      <script>
+        const form = document.querySelector('form');
+        const password = document.getElementById('password');
+    
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+    
+            if (password.value.length < 8) {
+                const error = document.createElement('span');
+                error.textContent = 'Hasło musi mieć co najmniej 8 znaków';
+                error.style.color = 'red';
+                password.insertAdjacentElement('afterend', error);
+            } else {
+                form.submit();
+            }
+        });
+
+
+    </script>
+</body>
+</html>
