@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			p {
+				width: 150px;
+				height: 50px;
+			}
+            button {
+                border-radius: 15px;
+            }
+		</style>
+	</head>
+	<body>
+		<br /><br /><br />
+		<button id="button1" onclick="changeButtonBackground('button1')">
+			Button 1
+		</button>
+		<button id="button2" onclick="changeButtonBackground('button2')">
+			Button 2
+		</button>
+		<button id="button3" onclick="changeButtonBackground('button3')">
+			Button 3
+		</button>
+		<p id="p1" onclick="changeButtonBackground('p1')">pe1mamyto</p>
+		<p id="p2" onclick="changeButtonBackground('p2')">123123df</p>
+		<br /><br /><br />
 
-</head>
-<body>
-    <br><br><br>
-    <button id="button1" onclick="changeButtonBackground('button1')"> Button 1 </button>
-    <button id="button2" onclick="changeButtonBackground('button2')"> Button 2 </button>
-    <button id="button3" onclick="changeButtonBackground('button3')"> Button 3 </button>
-    <p id="p1" onclick="changeButtonBackground('p1')">pe1mamyto</p>
-    <br><br><br>
+		<form>
+			<label for="name">Imię:</label>
+			<input type="text" id="name" name="name" /><br /><br />
+			<label for="surname">Nazwisko:</label>
+			<input type="text" id="surname" name="surname" /><br /><br />
 
-    <form>
-        <label for="name">Imię:</label>
-        <input type="text" id="name" name="name"><br><br>
-      <label for="surname">Nazwisko:</label>
-      <input type="text" id="surname" name="surname"><br><br>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
-      
-      <label for="password">Hasło:</label>
-      <input type="password" id="password" name="password"><br><br>
-      
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" /><br /><br />
 
-        <input type="submit" value="Zapisz">
-      </form> 
+			<label for="password">Hasło:</label>
+			<input type="password" id="password" name="password" /><br /><br />
 
+			<input type="submit" value="Zapisz" />
+		</form>
 
+		<script>
+			function changeButtonBackground(id) {
+				let button1 = document.getElementById("button1");
+				let button2 = document.getElementById("button2");
+				let button3 = document.getElementById("button3");
+				let p1 = document.getElementById("p1");
+				let p2 = document.getElementById("p2");
 
-
-<script>
-
-function changeButtonBackground(id) {
-    let button1 = document.getElementById('button1');
-    let button2 = document.getElementById('button2');
-    let button3 = document.getElementById('button3');
-    let p1 = document.getElementById('p1');
- 
-    if(id === 'button1'){
-        button1.style.backgroundColor = "green";
-        setBackgroundAsDefault(button2, button3,p1)
-    }else if(id === 'button2'){
-        button2.style.backgroundColor = "purple";
-        setBackgroundAsDefault(button1, button3, p1)
-    }else if(id === 'button3'){
-        button3.style.backgroundColor = "blue";
-        setBackgroundAsDefault(button1, button2, p1)
-    }else if (id === 'p1'){
-        p1.style.backgroundColor = "yellow";
-        setBackgroundAsDefault(button2, button3, button1)
-    }
-}
- 
-function setBackgroundAsDefault(element1, element2, element3){
-    element1.style.backgroundColor = "buttonface";
-    element2.style.backgroundColor = "buttonface";
-    element3.style.backgroundColor = "buttonface";
-}
-
-</script>
-
-</body>
+				if (id === "button1") {
+					button1.style.backgroundColor = "green";
+					setBackgroundAsDefault(button2, button3, p1, p2);
+				} else if (id === "button2") {
+					button2.style.backgroundColor = "purple";
+					setBackgroundAsDefault(button1, button3, p1, p2);
+				} else if (id === "button3") {
+					button3.style.backgroundColor = "blue";
+					setBackgroundAsDefault(button1, button2, p1, p2);
+				} else if (id === "p1") {
+					p1.style.backgroundColor = "yellow";
+					setBackgroundAsDefault(button2, button3, button1, p2);
+				} else if (id === "p2") {
+					p2.style.backgroundColor = "black";
+					setBackgroundAsDefault(button1, button2, button3, p1);
+				}
+			}
+			function setBackgroundAsDefault(
+				element1,
+				element2,
+				element3,
+				element4,
+				element5
+			) {
+				element1.style.backgroundColor = "buttonface";
+				element2.style.backgroundColor = "buttonface";
+				element3.style.backgroundColor = "buttonface";
+				element4.style.backgroundColor = "buttonface";
+				element5.style.backgroundColor = "buttonface";
+			}
+		</script>
+	</body>
 </html>
-
-
-
-
-
-
 
 <!-- zad1 -->
 
